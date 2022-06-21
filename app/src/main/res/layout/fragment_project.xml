@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.example.truecallerassignment.model.DataState"/>
+        <import type="com.example.truecallerassignment.viewmodel.ProjectViewModel"/>
+        <import type="com.example.truecallerassignment.viewmodel.ItemsViewModel"/>
+        <import type="com.example.truecallerassignment.listener.IClickListener"/>
+        <import type="android.content.Context"/>
+        <variable name="listener" type="com.example.truecallerassignment.listener.IClickListener" />
+        <variable name="viewmodel" type="com.example.truecallerassignment.viewmodel.ItemsViewModel"  />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="@dimen/dimen_10dp"
+            android:id="@+id/tenth_char_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TitleTextStyle"
+            setTenthChar = "@{viewmodel.getTenthChar}"
+            tools:text="@string/tenth_character_is"/>
+
+        <TextView
+            android:layout_margin="@dimen/dimen_10dp"
+            android:id="@+id/every_tenth_char_txt"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tenth_char_txt"
+            style="@style/TitleTextStyle"
+            viewModel="@{viewmodel}"
+            everyTenthChar = "@{viewmodel.everyTenthCharOverview}"
+            tools:text="@string/every_tenth_character_is"/>
+
+        <TextView
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/every_tenth_char_txt"
+            style="@style/TitleTextStyle"
+            viewModel="@{viewmodel}"
+            setWordsCount= "@{viewmodel.wordsCountOverview}"
+            tools:text="@string/words_count_is"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TrueCallerAssignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tenth_character_is">1) 10th Character is \"%s\"</string>
+    <string name="every_tenth_character_is">2) Every 10th Character list : \"%s ...View More</string>
+    <string name="words_count_is">3) Total Unique Words : %s ...View More</string>
+
+    <string name="fetching_10th_char_please_wait">1) Fetching 10th Character...</string>
+    <string name="fetching_list_every_10th_char_please_wait">2) Fetching the list of every 10th Character...</string>
+    <string name="fetching_all_unique_words">3) Fetching the unique words...</string>
+</resources>

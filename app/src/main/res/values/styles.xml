@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/truecaller_splash</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="background">@drawable/text_border</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dimen_18sp</item>
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <style name="ItemTextStyle">
+        <item name="background">@drawable/text_border</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+
+</resources>
